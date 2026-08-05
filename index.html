@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="cs">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hormonální terapeutická sestava — jednodenní seminář s Ivanou Juříkovou</title>
+<meta name="description" content="Za jeden den se naučíš hormonální terapeutickou sestavu, která ti pomůže zmírnit příznaky perimenopauzy — návaly, nespavost, únavu, přibírání. A budeš ji mít už navždy. Zámek Berchtold, jen 10 míst.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Mulish:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #57a99e;
+    --teal-dark: #2f6f66;
+    --teal-deep: #245a52;
+    --pink: #d6537d;
+    --pink-dark: #bf3f69;
+    --cream: #fbf6f2;
+    --mint: #eaf4f1;
+    --pink-soft: #fce9f0;
+    --ink: #33322f;
+    --muted: #6f6a64;
+    --line: #ece6df;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Mulish", system-ui, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .serif { font-family: "Playfair Display", Georgia, serif; font-weight: 600; line-height: 1.14; }
+  .i { font-style: italic; color: var(--pink); font-weight: 600; }
+  .wrap { width: 100%; max-width: 940px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+  a { color: inherit; }
+
+  .kicker { display: block; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--teal-dark); }
+  .h2 { font-size: clamp(28px, 4.4vw, 44px); margin-top: 10px; }
+  .lead { color: var(--muted); font-size: 18px; }
+  section { padding: 84px 0; }
+  .center { text-align: center; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; border-radius: 999px; padding: 15px 30px; text-decoration: none; transition: transform .1s, background .15s; cursor: pointer; border: none; }
+  .btn-pink { background: var(--pink); color: #fff; }
+  .btn-pink:hover { background: var(--pink-dark); }
+  .btn-white { background: #fff; color: var(--pink); }
+  .btn:active { transform: scale(.98); }
+
+  /* Sticky termínová lišta s odpočtem — čistá, bez emoji */
+  .topbar { position: sticky; top: 0; z-index: 30; background: var(--pink); color: #fff; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; min-height: 52px; padding-top: 9px; padding-bottom: 9px; }
+  .topbar .term { font-size: 14.5px; font-weight: 600; }
+  .topbar .cd { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 15px; letter-spacing: .01em; }
+  .topbar .cd .u { font-weight: 500; opacity: .82; margin: 0 2px 0 1px; }
+  .topbar a { color: var(--pink); background: #fff; border-radius: 999px; padding: 8px 18px; font-weight: 700; font-size: 13.5px; text-decoration: none; white-space: nowrap; }
+  @media (max-width: 640px) { .topbar .wrap { justify-content: center; text-align: center; } }
+
+  /* Countdown v nabídkové sekci */
+  .countdown-big { display: inline-flex; gap: 12px; margin-top: 4px; }
+  .countdown-big .unit { min-width: 78px; text-align: center; }
+  .countdown-big .unit b { display: block; font-family: "Playfair Display", serif; font-size: 44px; font-weight: 700; color: var(--pink); line-height: 1; font-variant-numeric: tabular-nums; }
+  .countdown-big .unit span { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
+  /* Hero */
+  .hero { background: var(--teal); color: #fff; text-align: center; padding: 92px 0 100px; }
+  .eyebrow { display: inline-block; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #fff; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 8px 18px; }
+  .hero h1 { font-size: clamp(40px, 7vw, 74px); margin: 26px 0 22px; }
+  .hero h1 .i { color: #f6d3e0; }
+  .hero .lead { color: rgba(255,255,255,.92); max-width: 40ch; margin: 0 auto 34px; font-size: 19px; }
+  .hero .trust { margin-top: 20px; font-size: 13.5px; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255,255,255,.85); font-weight: 600; }
+
+  /* Promise band */
+  .promise { background: var(--cream); text-align: center; }
+  .promise .quote { font-family: "Playfair Display", serif; font-style: italic; font-size: clamp(24px, 3.6vw, 34px); line-height: 1.4; max-width: 24ch; margin: 0 auto; }
+  .promise .cols { display: grid; gap: 26px; margin-top: 48px; text-align: left; }
+  @media (min-width: 760px) { .promise .cols { grid-template-columns: repeat(3, 1fr); gap: 30px; } }
+  .promise .cols p { color: var(--muted); font-size: 15.5px; }
+  .promise .cols strong { color: var(--ink); }
+
+  /* Cards / lists */
+  .cards { display: grid; gap: 14px; margin-top: 44px; }
+  @media (min-width: 720px) { .cards.two { grid-template-columns: 1fr 1fr; gap: 16px; } }
+  .card { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+  .card .t { font-weight: 700; font-size: 17px; }
+  .card .d { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+  /* Čistá zaškrtávací odrážka (bez emoji) */
+  .check { list-style: none; display: grid; gap: 13px; margin-top: 22px; }
+  .check li { position: relative; padding-left: 30px; font-size: 16.5px; }
+  .check li::before { content: ""; position: absolute; left: 4px; top: 7px; width: 7px; height: 12px; border: solid var(--teal); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+
+  /* Big benefit blocks */
+  .benefit { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
+  .benefit + .benefit { margin-top: 20px; }
+  .benefit h3 { font-size: 24px; }
+  .benefit p { color: var(--muted); margin-top: 8px; }
+
+  /* Timeline */
+  .timeline { margin-top: 48px; border-left: 2px solid var(--line); padding-left: 30px; display: grid; gap: 34px; }
+  .tl { position: relative; }
+  .tl::before { content: ""; position: absolute; left: -37px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--pink); border: 3px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+  .tl .time { font-weight: 700; font-size: 14px; letter-spacing: .06em; color: var(--teal-dark); }
+  .tl h3 { font-size: 21px; margin: 3px 0 7px; }
+  .tl p { color: var(--muted); font-size: 15.5px; }
+  .tl .q { margin-top: 12px; font-style: italic; color: var(--ink); background: var(--pink-soft); border-radius: 12px; padding: 13px 17px; font-size: 15px; }
+
+  /* Soft box */
+  .soft { background: var(--pink-soft); border-radius: 20px; padding: 34px; text-align: center; }
+  .soft h3 { font-size: 24px; margin-top: 8px; }
+  .soft p { color: var(--muted); margin-top: 10px; }
+
+  /* Venue */
+  .venue { background: var(--teal); color: #fff; text-align: center; }
+  .venue h2 { color: #fff; }
+  .venue .kicker { color: #f6d3e0; }
+  .venue .lead { color: rgba(255,255,255,.9); max-width: 46ch; margin: 16px auto 0; }
+
+  /* Price */
+  .price-card { max-width: 560px; margin: 44px auto 0; background: var(--cream); border: 1px solid var(--line); border-radius: 24px; padding: 42px 34px; text-align: center; }
+  .price-card .amount { font-family: "Playfair Display", serif; font-size: 66px; font-weight: 700; color: var(--pink); line-height: 1; }
+  .price-card .once { display: block; margin-top: 8px; font-weight: 700; color: var(--ink); }
+  .price-card p { color: var(--muted); margin-top: 20px; font-size: 15.5px; }
+
+  .mint { background: var(--mint); }
+  .cream-sec { background: var(--cream); }
+
+  /* Testimonials */
+  .quotes { display: grid; gap: 18px; margin-top: 44px; }
+  @media (min-width: 760px) { .quotes { grid-template-columns: repeat(3, 1fr); } }
+  .quote-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px; text-align: left; }
+  .stars { color: #e6b800; letter-spacing: 3px; font-size: 15px; }
+  .quote-card p { margin: 13px 0; font-size: 15.5px; }
+  .quote-card .who { font-weight: 700; color: var(--teal-dark); }
+
+  /* Final CTA */
+  .final { background: linear-gradient(160deg, var(--pink) 0%, var(--pink-dark) 100%); color: #fff; text-align: center; }
+  .final h2 { color: #fff; font-size: clamp(34px, 5.5vw, 56px); }
+  .final h2 .i { color: #fbe0ea; }
+  .final .lead { color: rgba(255,255,255,.92); max-width: 34ch; margin: 20px auto 32px; }
+  .final .trust { margin-top: 18px; font-size: 13.5px; letter-spacing: .05em; text-transform: uppercase; color: rgba(255,255,255,.9); }
+
+  footer { background: var(--teal-deep); color: rgba(255,255,255,.85); text-align: center; padding: 44px 0; font-size: 14px; }
+  footer .name { font-family: "Playfair Display", serif; font-style: italic; font-size: 22px; color: #fff; }
+
+  /* Fotky */
+  .section-img { width: 100%; display: block; border-radius: 22px; object-fit: cover; box-shadow: 0 24px 50px -28px rgba(0,0,0,.35); }
+  .hero .wrap { max-width: 1080px; }
+  .hero-grid { display: grid; gap: 44px; align-items: center; }
+  .hero-photo { border-radius: 24px; overflow: hidden; box-shadow: 0 34px 70px -30px rgba(0,0,0,.55); }
+  .hero-photo img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr 0.82fr; gap: 56px; }
+    .hero-grid > div:first-child { text-align: left; }
+    .hero-grid .lead { margin-left: 0; margin-right: 0; }
+  }
+  .about-grid { display: grid; gap: 36px; align-items: center; text-align: center; }
+  .about-photo { border-radius: 22px; overflow: hidden; box-shadow: 0 24px 50px -25px rgba(0,0,0,.35); }
+  .about-photo img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  @media (min-width: 860px) { .about-grid { grid-template-columns: 0.8fr 1.2fr; text-align: left; gap: 44px; } }
+  .recenze-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 40px; }
+  .recenze-grid img { width: 100%; display: block; border-radius: 16px; box-shadow: 0 14px 34px -20px rgba(0,0,0,.3); }
+  @media (min-width: 720px) { .recenze-grid img { width: calc(33.333% - 12px); } }
+  .video-recenze-title { text-align: center; margin-top: 56px; font-size: clamp(22px, 3vw, 30px); }
+  .video-recenze-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 18px; margin-top: 28px; }
+  .video-recenze-grid .vr { border-radius: 16px; overflow: hidden; background: #000; box-shadow: 0 14px 34px -20px rgba(0,0,0,.3); }
+  .video-recenze-grid .vr iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .video-recenze-grid .vr-landscape { width: 100%; aspect-ratio: 16 / 9; }
+  .video-recenze-grid .vr-portrait { width: 100%; max-width: 300px; aspect-ratio: 9 / 16; }
+  @media (min-width: 720px) {
+    .video-recenze-grid .vr-landscape { width: calc(50% - 9px); }
+    .video-recenze-grid .vr-portrait { width: 300px; }
+  }
+
+  /* VSL video (vertikální) */
+  .vsl { background: var(--ink); color: #fff; }
+  .vsl .kicker { color: #f6d3e0; }
+  .vsl h2 { color: #fff; }
+  .vsl-frame { max-width: 380px; margin: 34px auto 0; border-radius: 24px; overflow: hidden; background: #000; box-shadow: 0 34px 70px -30px rgba(0,0,0,.7); }
+  .vsl-frame video { display: block; width: 100%; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+</style>
+
+<style data-gb-overrides>
+#iw2jx{margin-top:14px;}#ihzs11{margin-top:14px;}#iom91f{aspect-ratio:16/9;}#ipplg4{max-width:900px;margin-top:44px;}#i0cz5u{max-width:760px;margin-top:44px;}#imzwgd{aspect-ratio:16/9;}#ihvxfk{margin-top:40px;}#iquqy2{margin-top:6px;}#ipsy7f{margin-top:24px;font-size:18px;padding:17px 36px;}#iffuz8{margin-top:14px;font-size:13px;}#ihu4jy{max-width:420px;margin:26px auto 0;text-align:left;}#ic2vr5{margin-top:28px;}#itg9ug{margin-top:16px;}#iwyzip{font-style:italic;font-size:22px;line-height:1.5;margin:24px 0 0;max-width:34ch;color:var(--ink);}#im0ry7{color:var(--pink-dark);}#id8gyr{margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="term">Nejbližší termín: sobota 26. 9. 2026, Zámek Berchtold</span><span data-countdown="" class="cd"><b data-d="">–</b><span class="u">dní</span> <b data-h="">–</b><span class="u">h</span> <b data-m="">–</b><span class="u">m</span> <b data-s="">–</b><span class="u">s</span></span><a href="#nabidka">Rezervovat místo</a></div></div><!-- HERO --><header class="hero"><div class="wrap"><div class="hero-grid"><div><span class="eyebrow">Jednodenní seminář na Zámku Berchtold</span><h1>Jeden den.<br>Sestava na <span class="i">celý život</span>.</h1><p class="lead">Za jeden den se naučíš hormonální terapeutickou sestavu, která ti pomůže zmírnit příznaky perimenopauzy. A budeš ji mít už navždy.</p><a href="#nabidka" class="btn btn-white">Rezervovat místo</a><div class="trust">Sobota 26. 9. 2026 na Zámku Berchtold, jen 10 míst</div></div><div class="hero-photo"><img src="/sites/ivana-seminar/hero.jpg" alt="Ivana Juříková vede hormonální jógu se skupinou žen" loading="eager"></div></div></div></header><!-- VSL VIDEO --><section class="vsl"><div class="wrap center"><span class="kicker">Krátké video</span><h2 class="h2">Za minutu víš, jestli je to <span class="i">pro tebe</span></h2><div class="vsl-frame"><video allowfullscreen="allowfullscreen" controls playsinline="" preload="metadata" poster="/sites/ivana-seminar/vsl-poster.jpg"><source src="/sites/ivana-seminar/vsl.mp4" type="video/mp4"></video></div></div></section><!-- PROMISE --><section class="promise"><div class="wrap"><p class="quote">„Přijdeš jako žena, která bojuje se svým tělem. Odejdeš jako žena, která ví, jak s ním znovu <span class="i">spolupracovat</span>."</p><div class="cols"><p>Dieta nefunguje. Břicho je větší než dřív. V noci se budíš, přes den jsi bez energie a najednou máš pocit, že své tělo vůbec nepoznáváš.</p><p>Jenže v perimenopauze už <strong>nestačí dělat to, co fungovalo před deseti lety</strong>. Tělo potřebuje jiný přístup.</p><p>Jednou zaplatíš, jednou se naučíš, a máš to navždy. Žádné předplatné, žádné obnovování. <strong>Sestava zůstane v tvém těle.</strong></p></div></div></section><!-- JE TO PRO TEBE / SYMPTOMY --><section><div class="wrap center"><span class="kicker">Je to pro tebe?</span><h2 class="h2">Máš kila navíc kolem břicha? Návaly horka, nespavost a žádnou energii?</h2><p class="lead narrow" id="iw2jx">Perimenopauza není jen o hormonech. Velkou roli hraje i stres, dech, nervový systém a napětí v těle. Pokud tě tohle popisuje, tenhle den je pro tebe.</p></div><div class="wrap"><div class="cards two"><div class="card"><div class="t">Návaly horka</div><div class="d">Přicházejí bez varování, kdekoliv a kdykoliv.</div></div><div class="card"><div class="t">Únava</div><div class="d">Přes den bez energie, i po probdělé noci.</div></div><div class="card"><div class="t">Nespavost</div><div class="d">Budíš se v noci a neumíš znovu usnout.</div></div><div class="card"><div class="t">Výkyvy nálad</div><div class="d">Citlivější a podrážděnější, než chceš být.</div></div><div class="card"><div class="t">Přibírání kolem břicha</div><div class="d">I když jíš stejně jako dřív.</div></div><div class="card"><div class="t">Dlouhodobý stres</div><div class="d">Napětí, které se v těle drží a nepouští.</div></div></div></div></section><!-- CO SI ODNESEŠ --><section class="mint"><div class="wrap center"><span class="kicker">Co si odneseš</span><h2 class="h2">Neodcházíš jen s příjemným <span class="i">zážitkem</span></h2><p class="lead narrow" id="ihzs11">Odcházíš s praktickou sestavou, kterou můžeš cvičit doma, na dovolené nebo kdykoliv budeš cítit, že tělo potřebuje podpořit.</p></div><div class="wrap" id="ipplg4"><img src="/sites/ivana-seminar/skupina.jpg" alt="Ženy při společné praxi hormonální jógy" id="iom91f" class="section-img"></div><div class="wrap" id="i0cz5u"><div class="benefit"><h3>Naučíš se kompletní hormonální terapeutickou sestavu</h3><p>Krok za krokem. Vysvětlím ti každý pohyb i proč funguje. Nebudeš jen opakovat cviky, budeš přesně vědět, co děláš. Jednou se naučíš, máš to navždy.</p></div><div class="benefit"><h3>Získáš nástroj pro zvládání příznaků perimenopauzy</h3><p>Sestava pomáhá podpořit zvládání například:</p><ul class="check"><li>návalů horka</li><li>únavy</li><li>nespavosti</li><li>výkyvů nálad</li><li>přibírání zejména v oblasti břicha</li><li>dlouhodobého stresu</li></ul></div><div class="benefit"><h3>Co získáš navíc</h3><ul class="check"><li>Podklady ke kompletní sestavě na doma</li><li>Přehled jednotlivých cviků</li><li>Online opakovací lekci zdarma (cca za 3–4 týdny)</li><li>Uzavřenou WhatsApp skupinu pro otázky a podporu</li></ul></div></div></section><!-- PROGRAM DNE --><section><div class="wrap center"><span class="kicker">Program dne</span><h2 class="h2">Jak vypadá váš společný <span class="i">den</span></h2></div><div class="wrap narrow"><div class="timeline"><div class="tl"><div class="time">9:00</div><h3>Příchod a uvítání</h3><p>Usadíme se, vzájemně se poznáme. Prostor, kde se nemusíš za nic stydět.</p></div><div class="tl"><div class="time">9:30</div><h3>Pochopení hormonálních změn</h3><p>Proč se to děje a proč to není tvoje chyba. Základ, bez kterého praxe nedává smysl.</p><div class="q">„Konečně někdo, kdo mi vysvětlil proč, ne jen co mám dělat." Terezka</div></div><div class="tl"><div class="time">11:00</div><h3>Hormonální terapeutická sestava, část 1</h3><p>Postupné učení sestavy pod mým vedením. Každý pohyb vysvětlím i ukážu, žádná unáhlená praxe.</p></div><div class="tl"><div class="time">13:00</div><h3>Polední přestávka</h3><p>Čas na jídlo, procházku v zámeckém parku, sdílení s ostatními ženami.</p></div><div class="tl"><div class="time">14:30</div><h3>Hormonální terapeutická sestava, část 2</h3><p>Dokončení sestavy. Opakování, upevnění, individuální korekce. Odcházíš s tím, co umíš.</p></div><div class="tl"><div class="time">16:00</div><h3>Praxe a dotazy</h3><p>Celá sestava najednou. Prostor na otázky, které tě trápí, bez spěchu a bez odsuzování.</p></div><div class="tl"><div class="time">17:00</div><h3>Závěr a rozloučení</h3><p>Odcházíš s nástrojem, který budeš používat léta. A s vědomím, že nejsi v tom sama.</p></div></div></div></section><!-- VENUE --><section class="venue"><div class="wrap narrow"><span class="kicker">Prostředí</span><h2 class="h2">Seminář probíhá na Zámku Berchtold</h2><p class="lead">Tento den nebude jen o cvičení. Čeká tě klidné zámecké prostředí, park, prostor nadechnout se a na chvíli vypnout od každodenního shonu. Právě proto si ženy z tohoto dne odnášejí mnohem víc než jen novou sestavu.</p></div><div class="wrap" id="ihvxfk"><img src="/sites/ivana-seminar/zamek.jpg" alt="Zámek Berchtold" id="imzwgd" class="section-img"></div></section><!-- NABÍDKA / CENA (cíl všech CTA) --><section id="nabidka" class="cream-sec"><div class="wrap center"><span class="kicker">Rezervace</span><h2 class="h2">Nejbližší termín: <span class="i">sobota 26. 9. 2026</span></h2><p class="lead" id="iquqy2">Jednorázový seminář na Zámku Berchtold, jen 10 míst.</p><div data-countdown="" class="countdown-big"><div class="unit"><b data-d="">–</b><span>dní</span></div><div class="unit"><b data-h="">–</b><span>hodin</span></div><div class="unit"><b data-m="">–</b><span>minut</span></div><div class="unit"><b data-s="">–</b><span>sekund</span></div></div><div class="price-card"><div class="amount">2 480 Kč</div><span class="once">jednou a navždy</span><p>Přemýšlej nad tím takhle: kolik jsi utratila za doplňky, které nepomohly? Kolik stojí měsíční předplatné wellness aplikací? Hodinová sazba fyzioterapeuta bývá kolem 1 500 Kč. Sestavu cvičíš doma, v hotelu i venku, kdekoliv, bez dalších nákladů.</p><!-- STRIPE: sem přijde odkaz na Stripe checkout (nahradit href="#"). Toto tlačítko vede rovnou k platbě. --><a href="#" class="btn btn-pink" id="ipsy7f">Rezervovat a zaplatit</a><p id="iffuz8">Zabezpečená platba kartou, místo je tvoje ihned po zaplacení.</p></div></div></section><!-- PROČ TO FUNGUJE --><section class="mint"><div class="wrap narrow center"><span class="kicker">Proč to funguje</span><h2 class="h2">Hormonální terapeutická sestava <span class="i">propojuje</span></h2><ul class="check" id="ihu4jy"><li>dechová cvičení</li><li>specifické pozice</li><li>aktivaci žláz s vnitřní sekrecí</li><li>relaxaci nervového systému</li></ul><p class="lead" id="ic2vr5">Pravidelné cvičení může pomoci zmírnit obtíže spojené s perimenopauzou a podpořit celkovou hormonální rovnováhu.</p></div></section><!-- PROČ PRÁVĚ JÁ --><section><div class="wrap"><div class="about-grid"><div class="about-photo"><img src="/sites/ivana-seminar/meditace.jpg" alt="Klidná praxe hormonální jógy"></div><div><span class="kicker">Proč právě já</span><h2 class="h2">Kombinuji lékařství <span class="i">s jógou</span></h2><p class="lead" id="itg9ug">Jako zdravotní sestra vím, jak tělo funguje. Jako instruktorka hormonální jógy vím, jak s ním pracovat. Tato kombinace je vzácná. Na semináři nejsi jen dalším účastníkem, vidím tě, slyším tě, koriguji tě individuálně. Proto je počet míst omezený.</p><p class="serif" id="iwyzip">„Přijdeš jako žena, která bojuje se svým tělem. Odejdeš jako žena, která ví, jak s ním <span class="i">spolupracovat</span>."</p></div></div></div></section><!-- TESTIMONIALS --><section class="cream-sec"><div class="wrap center"><span class="kicker">Co říkají ženy</span><h2 class="h2">Zkušenosti účastnic</h2><div class="recenze-grid"><img src="/sites/ivana-seminar/recenze1.jpg" alt="Recenze účastnice"><img src="/sites/ivana-seminar/recenze2.jpg" alt="Recenze účastnice"><img src="/sites/ivana-seminar/recenze3.jpg" alt="Recenze účastnice"><img src="/sites/ivana-seminar/recenze4.jpg" alt="Recenze účastnice"><img src="/sites/ivana-seminar/recenze5.jpg" alt="Recenze účastnice"></div><h3 class="video-recenze-title">Ohlasy <span class="i">na videu</span></h3><div class="video-recenze-grid"><div class="vr vr-landscape"><iframe src="https://www.youtube-nocookie.com/embed/BYyDP38Grss?rel=0" title="Video ohlas účastnice semináře" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="vr vr-landscape"><iframe src="https://www.youtube-nocookie.com/embed/bQVVGkTI6gk?rel=0" title="Video ohlas účastnice semináře" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="vr vr-portrait"><iframe src="https://www.youtube-nocookie.com/embed/m8DJwwbb5n8?rel=0" title="Video ohlas účastnice semináře" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></div></section><!-- GARANCE --><section><div class="wrap narrow"><div class="soft"><span class="kicker" id="im0ry7">Garance</span><h3>Máš obavu, že si sestavu nezapamatuješ? Nemusíš.</h3><p>Dostaneš přehledné podklady domů a navíc online opakovací lekci, kde si všechno znovu projdeme. Nezůstaneš na to sama.</p></div></div></section><!-- FINAL CTA --><section class="final"><div class="wrap narrow"><h2>Den pro tebe.<br>Sestava <span class="i">navždy</span>.</h2><p class="lead" id="i4pn2h">Rezervuj si místo dříve, než bude obsazeno. Každý seminář má pouze 10 míst, abych měla pro každou z vás dostatek pozornosti.</p><a href="#nabidka" class="btn btn-white">Rezervovat místo</a><div class="trust">Sobota 26. 9. 2026 na Zámku Berchtold, jen 10 míst</div></div></section><footer id="iwdfdz"><div class="wrap"><div class="name">Ivana Juříková</div><div id="id8gyr">Hormonální terapeutická sestava, jednodenní seminář pro ženy v perimenopauze</div></div></footer><script>
+    // Odpočet do termínu semináře. Změna termínu = jediné datum níže.
+    (function () {
+      var target = new Date("2026-09-26T09:00:00").getTime();
+      var blocks = document.querySelectorAll("[data-countdown]");
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function set(b, sel, val) { var el = b.querySelector(sel); if (el) el.textContent = val; }
+      function tick() {
+        var diff = Math.max(0, target - Date.now());
+        var s = Math.floor(diff / 1000);
+        var d = Math.floor(s / 86400); s -= d * 86400;
+        var h = Math.floor(s / 3600); s -= h * 3600;
+        var m = Math.floor(s / 60); s -= m * 60;
+        blocks.forEach(function (b) {
+          set(b, "[data-d]", d);
+          set(b, "[data-h]", pad(h));
+          set(b, "[data-m]", pad(m));
+          set(b, "[data-s]", pad(s));
+        });
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
